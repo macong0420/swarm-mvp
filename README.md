@@ -41,9 +41,8 @@ A single coding agent works one step at a time. Swarm turns a request into indep
 ### Install
 
 ```sh
-npm install -g swarm-mvp
-# or run without installing:
-npx swarm-mvp --help
+# The npm package is not published yet; install from GitHub:
+npm install -g github:macong0420/swarm-mvp
 ```
 
 From a checkout:
@@ -266,9 +265,8 @@ MIT. See [LICENSE](LICENSE).
 ### 安装
 
 ```sh
-npm install -g swarm-mvp
-# 或直接运行：
-npx swarm-mvp --help
+# npm 包尚未发布；先从 GitHub 安装：
+npm install -g github:macong0420/swarm-mvp
 ```
 
 从源码：
