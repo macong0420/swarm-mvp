@@ -1,0 +1,31 @@
+{
+  "goal": "Add a slugify helper with tests",
+  "globalAcceptance": [
+    "node --test src/slugify.test.js"
+  ],
+  "tasks": [
+    {
+      "id": "implement_slugify",
+      "kind": "implement",
+      "title": "Implement slugify with its test",
+      "description": "Create src/slugify.js exporting slugify(value): lowercase, trim, replace non-alphanumeric runs with a single hyphen and trim hyphens. Create src/slugify.test.js with node:test cases for spaces, punctuation, unicode and empty input. Do not change other files.",
+      "writeScope": [
+        "src/slugify.js",
+        "src/slugify.test.js"
+      ],
+      "readContext": [
+        "src/index.js"
+      ],
+      "dependsOn": [],
+      "acceptance": {
+        "commands": [
+          "node --test src/slugify.test.js"
+        ]
+      },
+      "estimate": {
+        "files": 2,
+        "lines": 80
+      }
+    }
+  ]
+}

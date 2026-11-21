@@ -1,0 +1,72 @@
+{
+  "name": "swarm-mvp",
+  "version": "0.1.0",
+  "description": "Plan, run and integrate coding tasks in parallel Git worktrees.",
+  "license": "MIT",
+  "author": "swarm-mvp contributors",
+  "type": "module",
+  "keywords": [
+    "ai",
+    "agents",
+    "coding",
+    "git",
+    "worktree",
+    "orchestrator",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/macong0420/swarm-mvp.git"
+  },
+  "homepage": "https://github.com/macong0420/swarm-mvp#readme",
+  "bugs": {
+    "url": "https://github.com/macong0420/swarm-mvp/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "swarm": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "CHANGELOG.md",
+    "ROADMAP.md",
+    "Dockerfile",
+    "docs",
+    "examples"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "e2e": "tsx --test --test-name-pattern='dry run' test/run.test.ts",
+    "coverage": "node --experimental-test-coverage --import tsx --test test/*.test.ts",
+    "swarm": "tsx src/cli/index.ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm test",
+    "pack:check": "npm run build && npm pack --dry-run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.9.0",
+    "better-sqlite3": "^12.2.0",
+    "openai": "^7.57.0",
+    "picomatch": "^4.0.3",
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.15.30",
+    "@types/picomatch": "^4.0.3",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}

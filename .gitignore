@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.swarm/
+.env
+.env.*
+!.env.example
+*.tgz
+*.log
+*.pem
+*.key
+.DS_Store
+.idea/
+.vscode/
