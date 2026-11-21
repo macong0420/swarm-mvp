@@ -26,8 +26,8 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm test
-      - name: Coverage (node 22+)
-        if: matrix.node != 20
+      - name: Coverage (ubuntu, node 24)
+        if: matrix.os == 'ubuntu-latest' && matrix.node == 24
         run: npm run coverage
 
   windows-experimental:
